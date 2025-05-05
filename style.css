@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+@font-face {
+    font-family: "Random";
+    src: url(tipografia/Random\ Wednesday.ttf);
+} 
+@font-face {
+    font-family: "Obled";
+    src: url(tipografia/Obled\ Kids.otf);
+}
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 8px 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+#ladoIzquierdo {
+    position: relative;
+    background: #003147;
+    padding: 40px;
+    color: white;
+}
+
+#imgBox {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+#perfilTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+#perfilTexto h3 {
+    margin-bottom: 10px;
+    color: #00bcd4;
+    font-family: "Random";
+}
+
+#perfilTexto h2 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #00bcd4;
+    font-family: "Random";
+}
+
+#perfilTexto p {
+    font-size: 14px;
+}
+
+#informacionContacto {
+    margin-top: 20px;
+}
+
+#informacionContacto h3 {
+    margin-bottom: 10px;
+    margin-left: 80px;
+    font-family: "Obled";
+    color: #00bcd4;
+}
+
+
+#informacionContacto li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.iconos a{
+    color: #fff;
+}
+
+#ladoDerecho {
+    background: #f4f4f4;
+    padding: 40px;
+    color: #333;
+
+}
+
+#ladoDerecho h3 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #003147;
+    padding-bottom: 5px;
+    color: #003147;
+    font-family: "Obled";
+}
+
+#ladoDerecho h4 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #007b9e;
+}
+
+#ladoDerecho section {
+    list-style: 0;
+    padding: 0;
+}
+
+#ladoDerecho ul {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+#ladoDerecho p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconos img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+} 
+
+.iconos a:hover{
+    color: plum;
+    transition: ease-in-out 0.3s;
+}
+
+@keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #imgBox img {
+    animation: aparecer 1s ease-in-out;
+  }
+  
