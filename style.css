@@ -100,6 +100,7 @@ body {
     background: #f4f4f4;
     padding: 40px;
     color: #333;
+    position: relative;
 
 }
 
@@ -109,6 +110,7 @@ body {
     padding-bottom: 5px;
     color: #003147;
     font-family: "Obled";
+    position: relative;
 }
 
 #ladoDerecho h4 {
@@ -162,4 +164,47 @@ body {
   #imgBox img {
     animation: aparecer 1s ease-in-out;
   }
+
+.habilidades {
+    width: 100%;
+    height: 30px;
+    background-color: #90b3cf91;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+  }
   
+
+  .progreso1 {
+    height: 100%;
+    background-color: #05598a59;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+  }
+  .progreso2 {
+    height: 100%;
+    background-color: #05598a59;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  .progreso3 {
+    height: 100%;
+    background-color: #05598a59;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+ 
+  .texto {
+    color: #f9fcfd;
+    font-weight: bold;
+    z-index: 1;  
+  } 
