@@ -160,6 +160,15 @@ body {
       transform: translateY(0);
     }
   }
+  @keyframes llenarBarra {
+    0% {
+        width: 0;
+
+    }
+    100% {
+        width: 85%;
+    } 
+  }
   
   #imgBox img {
     animation: aparecer 1s ease-in-out;
@@ -171,6 +180,7 @@ body {
     background-color: #90b3cf91;
     border-radius: 15px;
     overflow: hidden;
+    animation: llenarBarra 2s ease-in-out;
     position: relative;
   }
   
@@ -183,7 +193,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 75%;
+    animation: llenarBarra 2s ;
   }
+
   .progreso2 {
     height: 100%;
     background-color: #05598a59;
@@ -192,6 +204,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 90%;
+    animation: llenarBarra 2s ease-in-out;
   }
   .progreso3 {
     height: 100%;
@@ -201,12 +214,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
+    animation: llenarBarra 2s ease-in-out;
   }
  
   .texto {
     color: #f9fcfd;
-    font-weight: bold;
-    z-index: 1;  
+    font-weight: bold; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center ;
   } 
 
     .contenedor {
@@ -231,4 +249,13 @@ body {
             font-size: 25px;
         }  } 
 
-    
+     #barra_m {
+        padding:0%;
+        list-style: none;
+    } 
+
+    #barra_m {
+        display: inline-flex;
+        background: linear-gradient( to right, #021258, #9fdefc );
+        color: #007b9e;
+    }
