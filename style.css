@@ -209,13 +209,26 @@ body {
     z-index: 1;  
   } 
 
-    .flex-container {
+    .contenedor {
         display: flex;
         flex-direction: column;
     }
-  @media (min-width:768px)
-  {
-    .flex-container {
-        flex-direction: row;
-    }
-  } 
+
+    @media (max-width: 600px) {
+        #contenedor {
+            grid-template-columns: 1fr;
+            margin: 30px;
+            padding: 20px;
+        }
+        #ladoIzquierdo, #ladoDerecho {
+            padding: 20px;
+        }
+        #imgBox {
+            width: 150px;
+            height: 150px;
+        }
+        #perfilTexto h3, #perfilTexto h2 {
+            font-size: 25px;
+        }  } 
+
+    
