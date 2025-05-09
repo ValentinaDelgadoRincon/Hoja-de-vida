@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
+
 @font-face {
     font-family: "Random";
     src: url(tipografia/Random\ Wednesday.ttf);
-} 
+}
+
 @font-face {
     font-family: "Obled";
     src: url(tipografia/Obled\ Kids.otf);
 }
+
 body {
     background-color: lightblue;
     display: flex;
@@ -85,14 +88,13 @@ body {
     color: #00bcd4;
 }
 
-
 #informacionContacto li {
     margin-bottom: 10px;
     font-size: 14px;
     align-items: center;
 }
 
-.iconos a{
+.iconos a {
     color: #fff;
 }
 
@@ -101,7 +103,6 @@ body {
     padding: 40px;
     color: #333;
     position: relative;
-
 }
 
 #ladoDerecho h3 {
@@ -143,36 +144,69 @@ body {
     width: 25px;
     height: 25px;
     margin-right: 0.5rem;
-} 
+}
 
-.iconos a:hover{
+.iconos a:hover {
     color: plum;
     transition: ease-in-out 0.3s;
 }
 
 @keyframes aparecer {
     from {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  @keyframes llenarBarra {
+}
+#imgBox img {
+    animation: aparecer 3s ease-in-out;
+}
+
+@keyframes llenarBarra1 {
     0% {
         width: 0;
-
     }
+
     100% {
-        width: 85%;
-    } 
-  }
-  
-  #imgBox img {
-    animation: aparecer 1s ease-in-out;
-  }
+        width: 75%;
+    }
+}
+
+@keyframes llenarBarra2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes llenarBarra3 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes llenarBarra4 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+
 
 .habilidades {
     width: 100%;
@@ -182,10 +216,9 @@ body {
     overflow: hidden;
     animation: llenarBarra 2s ease-in-out;
     position: relative;
-  }
-  
+}
 
-  .progreso1 {
+.progreso1 {
     height: 100%;
     background-color: #05598a59;
     position: relative;
@@ -193,10 +226,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 75%;
-    animation: llenarBarra 2s ;
-  }
+    animation: llenarBarra1 2s ease-in-out;
+}
 
-  .progreso2 {
+.progreso2 {
     height: 100%;
     background-color: #05598a59;
     position: relative;
@@ -204,9 +237,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 90%;
-    animation: llenarBarra 2s ease-in-out;
-  }
-  .progreso3 {
+    animation: llenarBarra2 2s ease-in-out;
+}
+
+.progreso3 {
     height: 100%;
     background-color: #05598a59;
     position: relative;
@@ -214,48 +248,91 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
-    animation: llenarBarra 2s ease-in-out;
-  }
- 
-  .texto {
+    animation: llenarBarra3 2s ease-in-out;
+}
+
+.progreso4 {
+    height: 100%;
+    background-color: #05598a59;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    animation: llenarBarra4 2s ease-in-out;
+}
+
+.texto {
     color: #f9fcfd;
-    font-weight: bold; 
+    font-weight: bold;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center ;
-  } 
+    text-align: center;
+}
 
-    .contenedor {
-        display: flex;
-        flex-direction: column;
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    #contenedor {
+        grid-template-columns: 1fr;
+        margin: 30px;
+        padding: 20px;
     }
 
-    @media (max-width: 600px) {
-        #contenedor {
-            grid-template-columns: 1fr;
-            margin: 30px;
-            padding: 20px;
-        }
-        #ladoIzquierdo, #ladoDerecho {
-            padding: 20px;
-        }
-        #imgBox {
-            width: 150px;
-            height: 150px;
-        }
-        #perfilTexto h3, #perfilTexto h2 {
-            font-size: 25px;
-        }  } 
-
-     #barra_m {
-        padding:0%;
-        list-style: none;
-    } 
-
-    #barra_m {
-        display: inline-flex;
-        background: linear-gradient( to right, #021258, #9fdefc );
-        color: #007b9e;
+    #ladoIzquierdo,
+    #ladoDerecho {
+        padding: 20px;
     }
+
+    #imgBox {
+        width: 150px;
+        height: 150px;
+    }
+
+    #perfilTexto h3,
+    #perfilTexto h2 {
+        font-size: 25px;
+    }
+}
+
+.barra {
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+
+.barra img {
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.barraContenido {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    border: 10px solid #ccc;
+    border-radius: 10px;
+}
+
+.barra:hover .barraContenido {
+    display: block;
+}
+
+.barraContenido a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.barraContenido a:hover {
+    background-color: #00bcd4;
+}
