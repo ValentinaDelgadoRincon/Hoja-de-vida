@@ -336,3 +336,31 @@ body {
 .barraContenido a:hover {
     background-color: #00bcd4;
 }
+
+details {
+    width: 300px;
+    border: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #90b3cf91;
+    font-family: Arial, sans-serif;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+summary::before {
+    content: "▶  ";
+    display: inline-block;
+    transition: transform 1 ease-in-out;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+} 
